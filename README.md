@@ -22,3 +22,7 @@ also be implemented inside directive itself and not call parent controller actio
 still not clear how to handle that exactly with Angular material so I leave it as is
   
 5. App has "delete" product form list feature, but no edit product feature (which obviously nice to have and "easy" to make, see TodoMVC samples)
+
+6. There is no "Add" button in the product input box. According to material design principles there is 'Done' button when you enter something in the input field 
+which will make sure data is submited (on mobile). In the browser it's just more easy to type text and hit Enter button (especially if it's single line of text, not multi-line input),
+so again no "Add" button required.   
