@@ -1,10 +1,10 @@
 # AngularJS with Material Design Example
 
 ## Links
-[AngularJS website](http://angularjs.org)
-[Angular Material website](https://material.angularjs.org)
-[Icons](https://www.google.com/design/icons)
-[Many TodoMVC samples](http://todomvc.com)
+[AngularJS website](http://angularjs.org)    
+[Angular Material website](https://material.angularjs.org)    
+[Icons](https://www.google.com/design/icons)    
+[Many TodoMVC samples](http://todomvc.com)    
 
 ## Possible implementation improvements
 
