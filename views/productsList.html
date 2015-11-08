@@ -1,0 +1,16 @@
+<md-list>
+    <md-list-item ng-repeat="product in products | filter:filterProducts"
+                  ng-class="{completed: product.completed}">
+
+        <md-checkbox aria-label="Completed" class="md-primary" ng-model="product.completed"></md-checkbox>
+
+        <div>
+            <label>{{product.title}}</label>
+            <md-icon ng-click="deleteProduct({param: product})"
+                     ng-style="grey"
+                     aria-label="delete"
+                     class="material-icons md-16 button">delete</md-icon>
+        </div>
+
+    </md-list-item>
+</md-list>

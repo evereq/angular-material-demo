@@ -1,0 +1,9 @@
+{
+  "private": true,
+  "name": "products-angular-material-demo",
+  "version": "0.0.1",
+  "description": "Simple demo of AngularJS with Material design",
+  "dependencies": {
+    "angular": "1.4.2"
+  }
+}
