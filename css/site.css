@@ -1,0 +1,49 @@
+/* We load Angular only at the bottom of body so we need this CSS style in the HEAD to make sure templates are not displayed before all loads */
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
+
+/* Custom icons */
+.material-icons.md-16 { font-size: 16px; }
+.material-icons.button { cursor: pointer; }
+
+/* Define content width */
+.doc-content {
+    max-width: 640px;
+    margin: 16px;
+    box-sizing: border-box;
+}
+
+/* Styles for text on cool image */
+.module {
+    background: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 0.4)
+    ),
+    url(//c1.staticflickr.com/3/2578/3824666058_65f49d3d4b_z.jpg?zz=1);
+    background-position-y: center;
+    width: 100%;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.module > header {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10px;
+}
+
+.module > header > h1 {
+    margin-bottom: -20px;
+    color: white;
+}
+
+md-list-item.completed {
+    text-decoration: line-through;
+    color: #BBB;
+}

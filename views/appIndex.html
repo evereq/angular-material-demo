@@ -1,0 +1,69 @@
+<div layout="padding" flex layout-align="center center">
+
+    <md-content flex class="doc-content">
+
+        <md-card flex>
+
+            <md-toolbar flex>
+                <div class="md-toolbar-tools">
+                    <span>2Buy Demo</span>
+                    <!-- fill up the space between left and right area -->
+                    <span flex></span>
+                </div>
+            </md-toolbar>
+
+            <div class="md-card-image module" alt="Products">
+                <header>
+                    <h1 class="md-display-2">Products List To Buy</h1>
+                </header>
+            </div>
+
+            <md-card-content layout="padding">
+
+                <h3 layout="row" layout-align="center center" flex ng-show="!products.length">Please add some products to the list to get started</h3>
+
+                <section id="filterAndProductsList" ng-show="products.length" flex>
+
+                    <header id="header" flex>
+
+                        <md-input-container>
+                            <label>Filter</label>
+                            <input id="filter" placeholder="Start typing product name to filter..." ng-model="filterProducts" autofocus>
+                        </md-input-container>
+
+                    </header>
+
+                    <section id="main">
+
+                        <products-list list="products" filter="filterProducts" delete-product='removeProduct(param)'></products-list>
+
+                    </section>
+
+                </section>
+
+            </md-card-content>
+
+                <md-content md-theme="dark" layout-padding flex layout="column">
+                    <md-input-container>
+                        <form flex layout="column" id="product-form" ng-submit="addProduct()">
+                            <label>What to buy:</label>
+                            <input id="new-product" placeholder="Enter product name" ng-model="newProduct" autofocus>
+                        </form>
+                    </md-input-container>
+                    <div class="md-actions" layout="row" layout-align="end center">
+                        <md-button ng-click="saveProducts()" class="md-raised md-primary">Save List</md-button>
+                        <md-button ng-click="loadProducts()">Load List</md-button>
+                    </div>
+                </md-content>
+
+        </md-card>
+
+        <footer id="info">
+            <div layout="padding" flex layout-align="center center">
+                <a href="https://github.com/evereq" class="md-caption">@Evereq</a>
+            </div>
+        </footer>
+
+    </md-content>
+
+</div>
