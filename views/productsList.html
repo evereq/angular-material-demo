@@ -5,7 +5,7 @@
         <md-checkbox aria-label="Completed" class="md-primary" ng-model="product.completed"></md-checkbox>
 
         <div>
-            <label>{{product.title}}</label>
+            <label>{{product.type}} '{{product.title}}' (qty:{{product.qty}})</label>
             <md-icon ng-click="deleteProduct({param: product})"
                      ng-style="grey"
                      aria-label="delete"

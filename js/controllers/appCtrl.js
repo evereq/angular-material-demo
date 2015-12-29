@@ -14,7 +14,11 @@ angular.module('buyApp')
 			right: true
 		};
 
+		$scope.productTypes = ['Fruit','Gadget','Ticket','Car'];
+
 		$scope.newProduct = '';
+		$scope.newProductType = 'Fruit';
+		$scope.newProductQty = 1;
 
 		$scope.filterProducts = '';
 
@@ -27,6 +31,8 @@ angular.module('buyApp')
 
 			var newProduct = {
 				title: $scope.newProduct.trim(),
+				type:  $scope.newProductType,
+				qty: $scope.newProductQty,
 				completed: false
 			};
 
@@ -38,6 +44,10 @@ angular.module('buyApp')
 
 			// We want to remove what user type as we already add that product to our list
 			$scope.newProduct = '';
+
+			$scope.newProductType = 'Fruit';
+
+			$scope.newProductQty = 1;
 
 			// We most probably want to reset filter to make sure user always see product he just add to the list (so it's not get filtered out if product name is in the filter)
 			$scope.filterProducts = '';
