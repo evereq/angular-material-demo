@@ -26,3 +26,5 @@ still not clear how to handle that exactly with Angular material so I leave it a
 6. There is no "Add" button in the product input box. According to material design principles there is 'Done' button when you enter something in the input field 
 which will make sure data is submited (on mobile). In the browser it's just more easy to type text and hit Enter button (especially if it's single line of text, not multi-line input),
 so again no "Add" button required.   
+
+7. Pie chart code is modified and adapted to AngularJS version from http://bl.ocks.org/Guerino1/2295263

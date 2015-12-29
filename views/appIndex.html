@@ -14,7 +14,7 @@
 
             <div class="md-card-image module" alt="Products">
                 <header>
-                    <h1 class="md-display-2">Products List To Buy</h1>
+                    <h1 class="md-display-2">Products List To Buy Ext</h1>
                 </header>
             </div>
 
@@ -44,12 +44,33 @@
             </md-card-content>
 
                 <md-content md-theme="dark" layout-padding flex layout="column">
-                    <md-input-container>
-                        <form flex layout="column" id="product-form" ng-submit="addProduct()">
-                            <label>What to buy:</label>
-                            <input id="new-product" placeholder="Enter product name and hit Enter..." ng-model="newProduct" autofocus>
+
+                        <form layout="row" id="product-form">
+                            <md-input-container flex="45">
+                            <label>Title</label>
+                            <input id="new-product" placeholder="Enter product name" ng-model="newProduct" autofocus>
+                            </md-input-container>
+                            <md-input-container class="md-block" flex="25">
+                                <label>Type</label>
+                                <md-select id="new-product-type" ng-model="newProductType">
+                                    <md-option ng-repeat="productType in productTypes" value="{{productType}}">
+                                        {{productType}}
+                                    </md-option>
+                                </md-select>
+                            </md-input-container>
+                            <md-input-container flex="10">
+                                <label>Qty</label>
+                                <input id="new-product-qty" type="number" placeholder="1" ng-model="newProductQty">
+                            </md-input-container>
+                            <md-input-container flex="10">
+                                <md-button class="md-raised md-warn" ng-click="addProduct()">Add</md-button>
+                            </md-input-container>
                         </form>
-                    </md-input-container>
+
+                    <div layout="row">
+                        <buy-chart data="products"></buy-chart>
+                    </div>
+
                     <div class="md-actions" layout="row" layout-align="end center">
                         <md-button ng-click="saveProducts()" class="md-raised md-primary">Save List</md-button>
                         <md-button ng-click="loadProducts()">Load List</md-button>
